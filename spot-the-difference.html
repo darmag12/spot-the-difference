@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spot the Difference</title>
+  <style>
+    .spot-container img {
+      width: 100%;
+      height: auto;
+    }
+   
+    map area{
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <div class="spot-container">
+    <img src="5636-Bike-Safety-Spot-the-Difference-Feature-Graphic-20230922.jpg" usemap="#spot-the-difference">
+    <map name="spot-the-difference" id="spot-the-difference">
+      <area id="helmet" class="helmet" alt="Helmet" title="Helmet" coords="394,98,543,238" shape="rect">
+      <area id="ref-vest" class="ref-vest" alt="Reflective Vest" title="Reflective Vest" coords="434,240,616,463" shape="rect">
+      <area id="no-cell" class="cell" alt="No Cell Phone Use" title="No Cell Phone Use" coords="248,266,422,366" shape="rect">
+      <area id="light" class="light" alt="Light" title="Light" coords="318,368,384,433" shape="rect">
+      <area id="bell" class="bell" alt="Bell" title="Bell" coords="388,385,430,436" shape="rect">
+      <area id="ref-front-w" class="ref-wheel" alt="Reflective Front Wheel" title="Reflective Front Wheel" coords="312,673,362,725" shape="rect">
+      <area id="ref-back-w" class="ref-wheel" alt="Reflective Back Wheel" title="Reflective Back Wheel" coords="633,406,684,459" shape="rect">
+      <area id="no-helmet" class="helmet" alt="No Helmet" title="No Helmet" coords="1356,97,1503,239" shape="rect">
+      <area id="no-ref-vest" class="ref-vest" alt="No Reflective Vest" title="No Reflective Vest" coords="1394,241,1577,464" shape="rect">
+      <area id="cell" class="cell" alt="Cell Phone Use" title="Cell Phone Use" coords="1209,266,1383,366" shape="rect">
+      <area id="no-light" class="light" alt="No Light" title="No Light" coords="1279,368,1346,433" shape="rect">
+      <area id="no-bell" class="bell" alt="No Bell" title="No Bell" coords="1347,385,1391,436" shape="rect">
+      <area id="no-ref-front-w" class="ref-wheel" alt="No Reflective Front Wheel" title="No Reflective Front Wheel" coords="1273,673,1324,725" shape="rect">
+      <area id="no-ref-back-w" class="ref-wheel" alt="No Reflective Back Wheel" title="No Reflective Back Wheel" coords="1595,407,1646,459" shape="rect">
+    </map>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+  integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
+  crossorigin="anonymous"></script>
+  <script src="./imageMapResizer.min.js"></script>
+  <script src="mapoid.js"></script>
+  <script type="text/javascript">
+  // resize image map
+  imageMapResize();
+  $(document).ready(function() {
+  $("map[name=spot-the-difference]").mapoid({
+    
+    // stroke color
+    strokeColor: 'white',
+
+    // stroke width
+    strokeWidth: 3,
+
+    // fill color
+    fillColor: '#ff00f2',
+
+    // 0-1
+    fillOpacity: 0.4,
+
+    // in milliseconds
+    fadeTime: 500,
+
+  });
+});
+</script>
+</body>
+</html>
