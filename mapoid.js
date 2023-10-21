@@ -418,10 +418,8 @@
 			
 			var self = this
 			let matchingClass;
-			var allAreas = document.querySelectorAll('area'); 
-			// console.log(allMatchingAreas); 
-			
-			
+			let allAreas = document.querySelectorAll('area');
+
 			// changed "mouseover" to click - Daryl
 			self.map.on('click', 'area',  function(e){
 				e.preventDefault();
@@ -429,9 +427,10 @@
 					if (matchingClass.className.includes(e.currentTarget.className)) {
 						// console.log(matchingClass);
 						matchingClass.click();
+						
 					}
 				  }
-				//console.log(14891)
+				
 				//if(!self.coordsLoaded)
 				//if( !self.mapIsVisible()  )
 				
@@ -440,13 +439,10 @@
 				self._eventCallback('click', e, $(this))
 				
 				self._mapover( $(this), false, false, true)
-				// console.log(e.currentTarget.className)
 				
 				
 				
 			})
-			
-			
 			
 			self.map.on('mouseout', 'area',  function(e){
 				//console.log(tid)
